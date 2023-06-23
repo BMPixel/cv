@@ -1,0 +1,186 @@
+%!TeX program = pdflatex
+% Geoff Boeing's Curriculum Vitae
+% Email: boeing@usc.edu
+% Web: https://geoffboeing.com/
+% Repo: https://github.com/gboeing/cv
+
+\documentclass[11pt,letterpaper]{report}
+
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
+\usepackage{microtype}% improve text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto}    % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+\usepackage{setspace} % custom line spacing
+\usepackage{amssymb}
+
+% what is your name?
+\newcommand{\myname}{Wenbo Pan}
+
+% select default typefaces
+\usepackage{ebgaramond} % document's serif typeface
+\usepackage{tgheros}    % document's sans serif typeface
+
+% how far to tab for list items with left-aligned date: different fonts need different widths
+\newcommand{\listtabwidth}{1.7cm}
+
+% define font to use as document's title
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+
+% set page margins (assumes letter paper)
+\geometry{body={6.5in, 9.0in},
+    left=1.0in,
+    top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% set line spacing
+\setstretch{0.9}
+
+% define space between list items
+\newcommand{\listitemspace}{0.25em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
+{\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+% print only the month and year when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+    colorlinks  = true,
+    urlcolor    = black,
+    citecolor   = black,
+    linkcolor   = black,
+    pdfauthor   = {\myname},
+    pdfkeywords = {city planning, housing, street networks, transportation, urban design, urban informatics},
+    pdftitle    = {\myname: Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
+\begin{document}
+\raggedright{}
+
+% display your name as the document title
+\namefont{\myname}
+
+% affiliation and contact info blocks
+\vspace{1em}
+\begin{minipage}[t]{0.700\textwidth}
+% current primary affiliation, left-aligned
+No.92, West Dazhi Street \\
+Harbin, Heilongjiang, 150001 \\
+China
+\end{minipage}
+\begin{minipage}[t]{0.295\textwidth}
+% contact info details, right-aligned
+\flushright{}
+\href{mailto:pixelwenbo@gmail.com}{pixelwenbo@gmail.com} \\
++86 153 7285 3559 \\
+\href{https://panwenbo.icu}{https://panwenbo.icu}
+\end{minipage}
+
+
+\section*{Education}
+
+\begin{tablist}
+
+\item[B.S] \tab{}Computer Science and Technology, Honors School Harbin Institute of Technology (HIT), Harbin China, 2020--Present \\
+\item[] \tab{} \textbf{GPA and marks of some selected lessons:}
+\item[] \tab{} Overall: 3.64/4.0, Rank: 18/96. \tab{} Machine Learning: 99, Mathematical Logic: 99,  Formal Languages and Automata: 95,  Natural Language Processing: 92.
+\end{tablist}
+
+\section*{Research Experience}
+
+\begin{tablist}
+
+\item[July. 2021-] \tab{}Research Center for Social Computing and Information Retrieval, HIT \\
+\textit{Research Intern}, Under the guidance of Dr. Libo Qin and Prof. Wanxiang Che \\
+Primarily focus on the \textbf{task-oriented dialogue system} and \textbf{spoken language understanding}\\
+
+\item[July. 2021-] \tab{} Department of Cyber Security, HIT \\
+\textit{Research Intern}, Under the guidance of Dr. Haining Yu \\
+Primarily focus on optimizing the \textbf{homomorphic encryption} methods in \textbf{federated machine learning} process. \\
+
+\item[Oct. 2020 -- Feb. 2021] \tab{} State Key Laboratory of Robotics and Systems, HIT \\
+\textit{Research Intern}, Under the guidance of Prof. He Zhang \\ 
+Primarily focus on the \textbf{3D reconstruction} and \textbf{target tracking} from the retinal fundus image. \\
+
+\end{tablist}
+
+
+\section*{Publications}
+
+\subsection*{Preprints}
+
+\begin{tablist}
+
+%\item[\the\year] \tab{}J. Harten and G. Boeing. \enquote{Access to the Exclusive City: Home Sharing as an Affordable Housing Strategy.} \textit{Urban Studies}, under review.
+
+\item[2023] \tab{}A Preliminary Evaluation of ChatGPT for Zero-shot Dialogue Understanding. \\ \textbf{Wenbo Pan}, Qiguang Chen, Xiao Xu, Wanxiang Che and Libo Qin. \textit{(Short paper, arXiv preprint arXiv:2304.04256)}\\
+
+\item[2023] \tab{}End-to-end Task-oriented Dialogue: A Survey of Tasks, Methods, and Future Directions. \\ Libo Qin, \textbf{Wenbo Pan}, Qiguang Chen, Lizi Liao, Zhou Yu, Yue Zhang, Wanxiang Che and Min Li \textit{(Long survey, Under submission)}\\
+
+\end{tablist}
+
+\section*{Honors \& Leadership}
+
+\begin{tablist}
+
+\item[2020-23] \tab{} Second Prize Scholarship(15\%) in the Honor School(3 times), Harbin Institute of Technology;
+\item[2022-23] \tab{} President of the HUAWEI Student Association at HIT, Harbin Institute of Technology;
+\item[2022] \tab{} Shenzhen International FinTech Competition (FinTechathon), top-10(2\%), WeBank, Shenzhen;
+\item[2022] \tab{} Mathematical Contest in Modeling, Honorable Winner. Consortium for Mathematics and Its Application, America;
+\item[2021] \tab{} Excellent Student Leader. Harbin Institute of Technology.
+
+\end{tablist}
+
+\section*{Skills}
+
+\begin{enumerate}[label=\textbullet]
+    \item \textbf{Languages}: English (IELTS 7.5), Mandarin Chinese (native)
+    \item \textbf{Programming Languages}: Python, C++, Javascript, Swift, C\#, Shell
+    \item \textbf{Development Tools}: Git, Linux, Vim, Docker, VSCode, \LaTeX
+    \item \textbf{Tools for DL}: PyTorch, Huggingface, wandb
+    \item \textbf{Others}: Resberry Pi, Arduino, Unity, Video Editing
+  \end{enumerate}
+
+% display today's date as Month Year after a vertical space below the end of the text
+\begin{center}
+    \vfill
+    Updated \monthyeardate\today
+\end{center}
+
+\end{document}
