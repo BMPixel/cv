@@ -31,6 +31,7 @@
 
 % define font to use as document's title
 \newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+\titlespacing*{\section}{0pt}{\dimexpr-12pt\relax}{12pt}
 
 % set section heading fonts and before/after spacing
 \SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
@@ -53,7 +54,7 @@
 \setstretch{0.9}
 
 % define space between list items
-\newcommand{\listitemspace}{0.25em}
+\newcommand{\listitemspace}{0.35em}
 
 % make unordered lists without bullets and use compact spacing
 \renewenvironment{itemize}
@@ -80,7 +81,7 @@
 % define hyperlink appearance and metadata for pdf properties
 \hypersetup{
     colorlinks  = true,
-    urlcolor    = black,
+    urlcolor    = blue,
     citecolor   = black,
     linkcolor   = black,
     pdfauthor   = {\myname},
@@ -100,16 +101,15 @@
 \vspace{1em}
 \begin{minipage}[t]{0.700\textwidth}
 % current primary affiliation, left-aligned
-No.92, West Dazhi Street \\
-Harbin, Heilongjiang, 150001 \\
-China
+Department of Computer Science \\
+City University of Hong Kong
 \end{minipage}
 \begin{minipage}[t]{0.295\textwidth}
 % contact info details, right-aligned
 \flushright{}
-\href{mailto:pixelwenbo@gmail.com}{pixelwenbo@gmail.com} \\
-+86 153 7285 3559 \\
-\href{https://panwenbo.icu}{https://panwenbo.icu}
+wenbo.pan@my.cityu.edu.hk \\
++852 6125 1985 \\
+\href{https://wenbo.io}{wenbo.io}
 \end{minipage}
 
 
@@ -117,70 +117,52 @@ China
 
 \begin{tablist}
 
-\item[B.S] \tab{}Computer Science and Technology, Honors School Harbin Institute of Technology (HIT), Harbin China, 2020--Present \\
-\item[] \tab{} \textbf{GPA and marks of some selected lessons:}
-\item[] \tab{} Overall: 3.64/4.0, Rank: 18/96. \tab{} Machine Learning: 99, Mathematical Logic: 99,  Formal Languages and Automata: 95,  Natural Language Processing: 92.
+\item[Ph.D] \tab{}Computer Science, City University of Hong Kong, Hong Kong, 2024--Present \\
+
+\item[B.S] \tab{}Computer Science, Honor School of Harbin Institute of Technology, China, 2020--2024 \\
+
+\end{tablist}
+
+\section*{Publications}
+
+\begin{tablist}
+    
+\item[2025] \tab{}The Hidden Dimensions of LLM Alignment: A Multi-Dimensional Safety Analysis. \\ \textbf{Wenbo Pan}, Zhichao Liu, Qiguang Chen, Xiangyang Zhou, Haining Yu, and Xiaohua Jia. \\ \textbf{ICML 2025 Under Review} (2 Accept, 2 Weak Accept)\\
+
+\item[2024] \tab{}Breaking Language Barriers: Cross-Lingual Continual Pre-Training at Scale. \\ Wenzhen Zheng*, \textbf{Wenbo Pan*}, Xu Xu*, Libo Qin, Li Yue, and Ming Zhou. (co-first author) \\ \textbf{EMNLP 2024}  \\
+
+\item[2023] \tab{}End-to-end Task-oriented Dialogue: A Survey of Tasks, Methods, and Future Directions. \\ Libo Qin, \textbf{Wenbo Pan}, Qiguang Chen, Lizi Liao, Zhou Yu, Yue Zhang, Wanxiang Che and Min Li \\ \textbf{EMNLP 2023} \\
+
+\item[2023] \tab{}A Preliminary Evaluation of ChatGPT for Zero-shot Dialogue Understanding. \\ \textbf{Wenbo Pan}, Qiguang Chen, Xiao Xu, Wanxiang Che and Libo Qin. \\ \textbf{arXiv Preprint} \\
+
+% \item[2023] \tab{}CroPrompt: Cross-task Interactive Prompting for Spoken Language Understanding. \\ Libo Qin, Fuxuan Wei, Qiguang Chen, Shijue Huang, \textbf{Wenbo Pan}, Jingxuan Zhou, Wanxiang Che and Min Li \textbf{(AAAI 2024)}\\
+
 \end{tablist}
 
 \section*{Research Experience}
 
 \begin{tablist}
+\item[Sept. 2024 - Present] \tab{}\textit{Ph.D candidate} in CityU under the guidance of Prof. Xiaohua Jia \\ 
+\textbf{Researching on alignment fine-tuning using mechanistic interpretability approaches.}\\
 
-\item[July. 2021-] \tab{}Research Center for Social Computing and Information Retrieval, HIT \\
-\textit{Research Intern}, Under the guidance of Dr. Libo Qin and Prof. Wanxiang Che \\
-Primarily focus on the \textbf{task-oriented dialogue system} and \textbf{spoken language understanding}\\
+\item[Dec. 2023 - June.2024] \tab{}\textit{Research Intern} at Langboat Inc. guided by Xiangyang Zhou \\
+\textbf{Developed cross-lingual scaling law and length extension pipeline for open-source LLMs.}\\
 
-\item[July. 2021-] \tab{} Department of Cyber Security, HIT \\
-\textit{Research Intern}, Under the guidance of Dr. Haining Yu \\
-Primarily focus on optimizing the \textbf{homomorphic encryption} methods in \textbf{federated machine learning} process. \\
-
-\item[Oct. 2020 -- Feb. 2021] \tab{} State Key Laboratory of Robotics and Systems, HIT \\
-\textit{Research Intern}, Under the guidance of Prof. He Zhang \\ 
-Primarily focus on the \textbf{3D reconstruction} and \textbf{target tracking} from the retinal fundus image. \\
-
+\item[July. 2021 - Dec. 2023] \tab{}\textit{Research Intern} at HIT-SCIR guided by Prof. Libo Qin and Prof. Wanxiang Che \\
+\textbf{Conducted literature reviews and designed end-to-end task-oriented dialogue system.}\\
 \end{tablist}
 
-
-\section*{Publications}
-
-\subsection*{Preprints}
+\section*{Projects \& Skills}
 
 \begin{tablist}
 
-%\item[\the\year] \tab{}J. Harten and G. Boeing. \enquote{Access to the Exclusive City: Home Sharing as an Affordable Housing Strategy.} \textit{Urban Studies}, under review.
+\item[2024] \tab{}Long-context optimized LLM \textit{Faro} - Finetuned different LLMs for tool calling ability and long-context performance. Open-sourced on \href{https://huggingface.co/collections/wenbopan/faro-series-660a357a3fbd33a1d09f46ca}{huggingface} with \textbf{230k+ downloads}.  \\
+Skills: \textbf{DeepSpeed Zero, transformers (TRL, QLoRA), wandb, Slurm}
 
-\item[2023] \tab{}A Preliminary Evaluation of ChatGPT for Zero-shot Dialogue Understanding. \\ \textbf{Wenbo Pan}, Qiguang Chen, Xiao Xu, Wanxiang Che and Libo Qin. \textit{(Short paper, arXiv preprint arXiv:2304.04256)}\\
+\item[2024] \tab{}moffee - Built a markdown compiler to generate slides from markdown files. Supports modern Markdown syntax and styles. Over \textbf{1.1k stars} on \href{https://github.com/BMPixel/moffee}{github}. \\
+Skills: \textbf{Python (pytest, uv), CI/CD(pre-commit, Github Actions, ReadTheDocs), LaTeX, HTML}
 
-\item[2023] \tab{}End-to-end Task-oriented Dialogue: A Survey of Tasks, Methods, and Future Directions. \\ Libo Qin, \textbf{Wenbo Pan}, Qiguang Chen, Lizi Liao, Zhou Yu, Yue Zhang, Wanxiang Che and Min Li \textit{(Long survey, Under submission)}\\
-
-\end{tablist}
-
-\section*{Honors \& Leadership}
-
-\begin{tablist}
-
-\item[2020-23] \tab{} Second Prize Scholarship(15\%) in the Honor School(3 times), Harbin Institute of Technology;
-\item[2022-23] \tab{} President of the HUAWEI Student Association at HIT, Harbin Institute of Technology;
-\item[2022] \tab{} Shenzhen International FinTech Competition (FinTechathon), top-10(2\%), WeBank, Shenzhen;
-\item[2022] \tab{} Mathematical Contest in Modeling, Honorable Winner. Consortium for Mathematics and Its Application, America;
-\item[2021] \tab{} Excellent Student Leader. Harbin Institute of Technology.
+\item[2022-23] \tab{}Founder and president of the HUAWEI Student Association at HIT -  hosted multiple events including workshops and cross-university collaborations with \textbf{100+ members}.
 
 \end{tablist}
-
-\section*{Skills}
-
-\begin{enumerate}[label=\textbullet]
-    \item \textbf{Languages}: English (IELTS 7.5), Mandarin Chinese (native)
-    \item \textbf{Programming Languages}: Python, C++, Javascript, Swift, C\#, Shell
-    \item \textbf{Development Tools}: Git, Linux, Vim, Docker, VSCode, \LaTeX
-    \item \textbf{Tools for DL}: PyTorch, Huggingface, wandb
-    \item \textbf{Others}: Resberry Pi, Arduino, Unity, Video Editing
-  \end{enumerate}
-
-% display today's date as Month Year after a vertical space below the end of the text
-\begin{center}
-    \vfill
-    Updated \monthyeardate\today
-\end{center}
-
 \end{document}
